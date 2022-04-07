@@ -3,3 +3,4 @@ output.xml
 *.egg*
 dist/
 build
+venv/

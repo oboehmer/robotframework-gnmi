@@ -13,7 +13,7 @@ pip install git+https://github.com/oboehmer/robotframework-gnmi.git
 
 ## Example ##
 
-Example robot file(untested)
+Example robot file 
 
 ```
 *** Settings ***
@@ -25,7 +25,6 @@ Library   GNMI
 *** Test Cases ***
 Connect and Get
 
-    GNMI connect session   MySession    target=@{target_host}    username=admin    password=admin    insecure=True
-    @{path}=   Create List   openconfig-interfaces:interfaces  openconfig-acl:acl
-    ${result}=   GNMI get    MySession  path=@{path}
-
+    GNMI connect session   MySession    target=@{target_host}    username=admin    password=password    insecure=True
+    @{path}=   Create List   openconfig-interfaces:interfaces
+    ${result}=   GNMI get    MySession  path=@{path}   encoding=ascii

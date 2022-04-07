@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 try:
-    from setuptools import setup, find_packages
+    from setuptools import setup
 except ImportError:
-    from distutils.core import setup, find_packages
+    from distutils.core import setup
 
 PACKAGE_NAME = 'robotframework-gnmi'
 
