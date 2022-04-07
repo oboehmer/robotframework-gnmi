@@ -7,7 +7,6 @@ from pygnmi.client import gNMIclient
 class GNMI(object):
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    ROBOT_LIBRARY_DOC_FORMAT = 'reST'
 
     def __init__(self):
         self.sessions = {}
@@ -36,7 +35,7 @@ class GNMI(object):
         return self.sessions[session].get(prefix=prefix, path=path, datatype=datatype, encoding=encoding)
 
     @keyword('GNMI set')
-    def set(self, session, delete: list = None, replace: list = None, update: list = None, encoding: str = 'json'):
+    def set_(self, session, delete: list = None, replace: list = None, update: list = None, encoding: str = 'json'):
 
         if not (session and session in self.sessions):
             raise ValueError('Session {} is not established, please connect it first'.format(session))
