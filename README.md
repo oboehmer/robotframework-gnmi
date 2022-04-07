@@ -8,7 +8,7 @@ At the moment, we just expose the attributes of `gNMIclient.__init__`, `gNMIclie
 
 ```
 pip install -U pip wheel
-pip install git+https://github.com:oboehmer/robotframework-gnmi.git
+pip install git+https://github.com/oboehmer/robotframework-gnmi.git
 ```
 
 ## Example ##
